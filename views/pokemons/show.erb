@@ -1,0 +1,16 @@
+<h2> <%= @pokemon.name %> </h2>
+
+<img class='pokemon_image' src="<%= @pokemon.img_url %>">
+
+<h3>Poke Stats</h3>
+<ul>
+  <li>
+    Name: <%= @pokemon.name %>
+  </li>
+    <li>
+      Type:  <%= @pokemon.poke_type %>
+    </li>
+    <li>
+      Command Power: <%= @pokemon.cp %>
+    </li>
+</ul>
