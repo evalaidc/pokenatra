@@ -11,6 +11,8 @@
       Type:  <%= @pokemon.poke_type %>
     </li>
     <li>
-      Command Power: <%= @pokemon.cp %>
+      CP: <%= @pokemon.cp %>
     </li>
 </ul>
+
+<p><a href='/pokemons/<%= @pokemon.id %>/edit'>Edit This Pokemon</a></p>
