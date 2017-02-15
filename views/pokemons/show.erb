@@ -1,18 +1,12 @@
-<h2> <%= @pokemon.name %> </h2>
+<div class='pokemon'>
+  <p><a href='/pokemons'> < back</a></p>
+  <h3> <%= @pokemon.name %> </h3>
+<p><img class='pokemon_image' src="<%= @pokemon.img_url %>"></p>
 
-<img class='pokemon_image' src="<%= @pokemon.img_url %>">
+      <p>Type:  <%= @pokemon.poke_type %></p>
 
-<h3>Poke Stats</h3>
-<ul>
-  <li>
-    Name: <%= @pokemon.name %>
-  </li>
-    <li>
-      Type:  <%= @pokemon.poke_type %>
-    </li>
-    <li>
-      CP: <%= @pokemon.cp %>
-    </li>
-</ul>
+      <p>CP: <%= @pokemon.cp %></p>
+
 
 <p><a href='/pokemons/<%= @pokemon.id %>/edit'>Edit This Pokemon</a></p>
+</div>

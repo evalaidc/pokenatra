@@ -8,6 +8,10 @@ require_relative 'db/connection'
 # Load models
 require_relative 'models/pokemon'
 
+get "/" do
+  erb :home
+end
+
 get '/pokemons' do
   @pokemons = Pokemon.all
   erb :"pokemons/index"
@@ -18,7 +22,7 @@ get '/pokemons/new' do
 end
 
 post '/pokemons' do
-  @pokemon = Pokemon.create(name: params[:name], poke_type: params[:poke_type], cp: params(rand(800)).to_s, img_url: "#")
+  @pokemon = Pokemon.create(name: params[:name], poke_type: params[:poke_type], cp: params[:cp], img_url: params[:img_url] )
   redirect "pokemons/#{@pokemon.id}"
 end
 
@@ -35,6 +39,7 @@ end
 put '/pokemons/:id' do
   @pokemon = Pokemon.find(params[:id])
   @pokemon.update(params[:pokemon])
+  redirect("/pokemons/#{@pokemon.id}")
 end
 
 delete '/pokemons/:id' do

@@ -1,12 +1,21 @@
-<h2> New Pokemon</h2>
+<div class="pokemon">
+  <p><a href='/pokemons'> < back</a></p>
+<h3> New Pokemon</h3>
 
 <form action="/pokemons" method="post" >
-  <label>Name:</label>
+  <p><label>Name:</label></p>
   <input type="text" name="name">
 
-  <label>Type:</label>
+  <p><label>Poke Type:</label></p>
   <input type="text"name="poke_type">
 
-  <input type='submit' value='Create'>
+  <p><label>Image URL:</label></p>
+  <input type="url" name="img_url">
+
+  <p><label>CP:</label></p>
+  <input type="number" name="cp">
+
+  <input class="button-style" type='submit' value='Create'>
 
 </form>
+</div>
